@@ -86,3 +86,50 @@
 - CSS 类名（nax-orange, nax-dark 等样式变量）
 - 图片资源 URL（保持 NAX 的图片）
 - 外部链接（YouTube、招聘网站）
+
+---
+
+# 待解决：Solutions Section 手机端内容截断问题
+
+## 问题描述
+Solutions section 在手机端显示时，文字内容没有完整显示。滚动到"海外においてはアメリカ、香港、中国、タイ、ベトナムに"这一行后，继续往下滑就直接跳到下一个页面（WE LOVE section），导致：
+- 第三段文字没有显示完整
+- VIEW MORE 按钮没有显示
+
+**桌面端表现正常**，所有内容完整可见。
+
+## 当前代码状态
+```tsx
+// Solutions/index.tsx
+<section className="sticky-section relative md:sticky z-auto md:z-[4] solutions-bg pt-[90px] pb-[100px] md:pb-[500px] md:top-0">
+
+// WeLove/index.tsx
+<section className="bg-white relative z-auto md:z-[5] py-[100px] md:py-[180px]">
+```
+
+## 已尝试的解决方案（均失败）
+
+| 方案 | 修改内容 | 结果 |
+|------|----------|------|
+| 增加 padding-bottom | `pb-[800px]`, `pb-[1400px]` | 不工作 |
+| 手机端禁用 sticky | `relative md:sticky` | 部分改善但仍被覆盖 |
+| 调整 z-index | `z-auto md:z-[4]` | 不工作 |
+
+## 根本原因分析
+1. sticky 定位设计用于桌面端的视差滚动效果
+2. 手机端内容垂直堆叠，高度超过视口
+3. 后续 section 的定位/z-index 覆盖了前面的内容
+4. 可能有全局 CSS 或其他组件影响布局
+
+## 待尝试的解决方案
+
+- [ ] **方案 A**：完全重构手机端布局，移除所有 sticky 和 z-index
+- [ ] **方案 B**：使用 min-height 确保内容区域有足够空间
+- [ ] **方案 C**：检查 Message、Challenge 等其他 sticky section
+- [ ] **方案 D**：直接访问 naxjapan.com 手机端，分析原版处理方式
+
+## 相关文件
+- `/src/components/Solutions/index.tsx`
+- `/src/components/WeLove/index.tsx`
+- `/src/styles/globals.css`
+- 原版参考：`/naxjapan-exports/naxjapan-export-home/components/Component_5.jsx`

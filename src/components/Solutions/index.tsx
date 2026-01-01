@@ -1,7 +1,7 @@
 export default function Solutions() {
   return (
     <section
-      className="sticky-section sticky z-[4] solutions-bg pt-[90px] pb-[500px] top-0"
+      className="sticky-section z-[4] solutions-bg pt-[90px] pb-[100px] md:pb-[500px]"
     >
       <div className="max-w-[1100px] mx-auto px-5">
         {/* Section Title */}
@@ -16,14 +16,19 @@ export default function Solutions() {
 
         {/* Content */}
         <div className="flex flex-col md:flex-row justify-between items-center mt-10 gap-10">
-          {/* Icons */}
-          <div className="w-full md:w-[450px] max-w-[513px] aspect-square relative mx-auto">
+          {/* Icons - Inverted Triangle Layout */}
+          <div
+            className="w-full md:w-[450px] max-w-[513px] relative shrink-0"
+            style={{ aspectRatio: '331 / 313' }}
+          >
+            {/* Air Freight - Top Left */}
             <img
               loading="lazy"
               src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/solutions01.svg"
               alt="AirFreight"
               className="fade-in w-[55%] absolute left-0 top-0"
             />
+            {/* Ocean Freight - Top Right */}
             <img
               loading="lazy"
               src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/solutions02.svg"
@@ -31,12 +36,13 @@ export default function Solutions() {
               className="fade-in w-[55%] absolute right-0 top-0"
               style={{ animationDelay: '0.2s' }}
             />
+            {/* Warehousing - Bottom Center (22.5% = (100% - 55%) / 2) */}
             <img
               loading="lazy"
               src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/solutions03.svg"
               alt="Warehousing"
-              className="fade-in w-[55%] absolute left-1/2 -translate-x-1/2 bottom-0"
-              style={{ animationDelay: '0.4s' }}
+              className="fade-in w-[55%] absolute bottom-0"
+              style={{ animationDelay: '0.4s', left: '22.5%' }}
             />
           </div>
 

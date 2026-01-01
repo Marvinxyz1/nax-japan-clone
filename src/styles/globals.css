@@ -100,11 +100,17 @@ body {
 
 /* Sticky Section Backgrounds */
 .sticky-section {
-  position: sticky;
-  top: 0;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+
+/* Only enable sticky on desktop (md: 768px+) */
+@media (min-width: 768px) {
+  .sticky-section {
+    position: sticky;
+    top: 0;
+  }
 }
 
 /* Solutions Background */
