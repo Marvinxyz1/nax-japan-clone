@@ -71,21 +71,26 @@ export default function Footer() {
           <div className="md:w-1/3">
             <Link to="/" className="inline-block mb-6">
               <img
-                src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/common/logo_footer.webp"
-                alt="NAX JAPAN"
+                src="https://www.top-sbl.jp/wp-content/uploads/2025/01/logo-e1740473656212.png"
+                alt="SBL株式会社"
                 className="w-[130px]"
               />
             </Link>
-            <p className="font-medium mb-4">NAX JAPAN株式会社</p>
+            <p className="font-medium mb-4">SBL株式会社</p>
             <p className="text-sm leading-relaxed text-neutral-400">
-              〒104-0061
+              〒270-1369
               <br />
-              東京都中央区銀座5-13-3
+              千葉県印西市鹿黒南4丁目2
               <br />
-              いちかわビル4階
+              グッドマンビジネスパーク
+              <br />
+              イーストゲート A区画 4F
             </p>
             <p className="text-sm mt-4">
-              <span className="text-neutral-400">Tel.</span>03-3541-3480
+              <span className="text-neutral-400">Tel.</span>0476-37-8508
+            </p>
+            <p className="text-sm mt-1">
+              <span className="text-neutral-400">Fax.</span>0476-37-8535
             </p>
           </div>
 
@@ -145,7 +150,7 @@ export default function Footer() {
 
         {/* Copyright */}
         <p className="text-center text-sm text-neutral-500 mt-12">
-          Copyright © NAX JAPAN All Rights Reserved.
+          © 2025 SBL CO.,LTD All Rights Reserved.
         </p>
       </div>
 

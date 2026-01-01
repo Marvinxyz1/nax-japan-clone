@@ -12,8 +12,8 @@ export default function Header() {
         <div>
           <Link to="/" className="w-[130px] flex items-center">
             <img
-              src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/common/logo.webp"
-              alt="NAX JAPAN"
+              src="https://www.top-sbl.jp/wp-content/uploads/2025/01/logo-e1740473656212.png"
+              alt="SBL株式会社"
               className="w-full max-w-full block"
             />
           </Link>

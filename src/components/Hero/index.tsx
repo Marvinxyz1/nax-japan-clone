@@ -14,7 +14,7 @@ export default function Hero() {
       <div className="parallax-jacket absolute left-1/2 top-1/2 -translate-x-1/4 -translate-y-1/2 w-[900px] lg:w-[1000px]">
         <img
           src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/fv_jacket.webp"
-          alt="NAX JAPAN JACKET"
+          alt="SBL株式会社"
           className="w-full block"
         />
       </div>

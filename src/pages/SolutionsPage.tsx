@@ -115,9 +115,9 @@ export default function SolutionsPage() {
                   トータル輸送を目指します
                 </h2>
                 <h3 className="text-nax-dark leading-[1.8] font-dnp font-semibold text-[23px] mt-0 mb-8">
-                  NAX JAPANは、国内外に独自のネットワークを築き、
+                  SBL株式会社は、多様な物流ニーズをシンプルに解決し、
                   <br />
-                  迅速且つ確実なサービスの拡大を追求しております。
+                  迅速且つ確実なサービスを追求しております。
                 </h3>
                 <p className="text-nax-dark leading-[1.9] font-noto tracking-[0.08px] mt-0">
                   国内においては日本の主要国際空港である成田空港・関西空港及び東京港の近郊に自社倉庫を構え、お客様が求める多様な要望を具現化します。

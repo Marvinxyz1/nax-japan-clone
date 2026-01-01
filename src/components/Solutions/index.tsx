@@ -43,7 +43,7 @@ export default function Solutions() {
           {/* Text Content */}
           <div className="max-w-[513px]">
             <p className="fade-in text-white leading-relaxed font-dnp text-sm md:text-base mb-6">
-              NAX JAPANは、国内外に独自のネットワークを築き、迅速且つ確実なサービスの拡大を追求しております。
+              SBL株式会社は、多様な物流ニーズをシンプルに解決し、迅速且つ確実なサービスを追求しております。
             </p>
             <p className="fade-in text-white leading-relaxed font-dnp text-sm md:text-base mb-6">
               国内においては日本の主要国際空港である成田空港・関西空港及び東京港の近郊に自社倉庫を構え、お客様が求める多様な要望を具現化します。
