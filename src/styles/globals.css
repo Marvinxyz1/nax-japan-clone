@@ -1,0 +1,157 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base Styles */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Animation Classes */
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.fade-in.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-in-right {
+  opacity: 0;
+  transform: translateX(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.slide-in-right.is-visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Parallax Effect */
+.parallax-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.parallax-element {
+  will-change: transform;
+}
+
+/* Button Hover Effects */
+.btn-hover {
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.btn-hover::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: left 0.3s ease;
+}
+
+.btn-hover:hover::before {
+  left: 100%;
+}
+
+/* Section Title Styles */
+.section-title {
+  font-family: 'din-condensed', sans-serif;
+  line-height: 1.1;
+}
+
+.section-subtitle {
+  font-family: 'dnp-shuei-gothic-kin-std', sans-serif;
+  font-weight: 600;
+}
+
+/* Sticky Section Backgrounds */
+.sticky-section {
+  position: sticky;
+  top: 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Solutions Background */
+.solutions-bg {
+  background-image: url('https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/bg_solutions_pc.webp');
+}
+
+/* Challenge Background */
+.challenge-bg {
+  background-image: url('https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/bg_challenge_pc.webp');
+}
+
+/* News Background */
+.news-bg {
+  background-image: url('https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/bg_news_pc.webp');
+}
+
+/* Footer Background */
+.footer-bg {
+  background-color: #121212;
+}
+
+/* Mobile Menu Animation */
+.mobile-menu {
+  transform: translateX(100%);
+  transition: transform 0.4s ease-in-out;
+}
+
+.mobile-menu.is-open {
+  transform: translateX(0);
+}
+
+/* Video Container */
+.video-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .section-title {
+    font-size: 48px !important;
+  }
+}
