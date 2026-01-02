@@ -7,7 +7,7 @@ export default function CompanyPage() {
     { label: '会社名', value: 'SBL株式会社', icon: Building2 },
     {
       label: '所在地',
-      value: '〒270-1369 千葉県印西市鹿黒南4丁目2\nグッドマンビジネスパーク イーストゲート A区画 4F',
+      value: '〒276-0013 千葉県八千代市保品1809-2\nプロロジスパーク八千代2 3F',
       icon: MapPin
     },
     { label: 'TEL', value: '047-637-8508', icon: Phone },
@@ -317,19 +317,19 @@ export default function CompanyPage() {
 
               <div className="space-y-4 text-[15px] text-nax-gray">
                 <p className="leading-relaxed">
-                  〒270-1369<br />
-                  千葉県印西市鹿黒南4丁目2<br />
-                  グッドマンビジネスパーク<br />
-                  イーストゲート A区画 4F
+                  〒276-0013<br />
+                  千葉県八千代市保品1809-2<br />
+                  プロロジスパーク八千代2<br />
+                  3F
                 </p>
                 <div className="pt-4 border-t border-neutral-100">
                   <p className="text-[13px] text-nax-gray/60 mb-1">最寄駅</p>
-                  <p>千葉ニュータウン中央駅</p>
+                  <p>八千代緑が丘駅</p>
                 </div>
               </div>
 
               <a
-                href="https://maps.google.com/maps?ll=35.812267,140.139116&z=16&t=m&hl=ja&gl=JP&mapclient=embed&cid=15711726391695489709"
+                href="https://www.google.com/maps/search/?api=1&query=プロロジスパーク八千代2+千葉県八千代市保品1809-2"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="mt-6 inline-flex items-center gap-2 text-nax-orange hover:text-nax-dark transition-colors duration-300 text-[14px] font-medium"
@@ -345,7 +345,7 @@ export default function CompanyPage() {
             <div className="lg:col-span-2 fade-in">
               <div className="bg-white rounded-sm shadow-sm overflow-hidden h-[400px] lg:h-full min-h-[400px]">
                 <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3229.8!2d140.139116!3d35.812267!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022875c05d3f251%3A0xda2a2a9e3b8f72ad!2z44Kw44OD44OJ44Oe44Oz44OT44K444ON44K544OR44O844Kv!5e0!3m2!1sja!2sjp!4v1704000000000!5m2!1sja!2sjp"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3236.5!2d140.0647!3d35.7297!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6022f3e8c8b9d555%3A0x1234567890abcdef!2z44OX44Ot44Ot44K444K544OR44O844Kv5YWr5Y2D5Luj!5e0!3m2!1sja!2sjp!4v1704000000000!5m2!1sja!2sjp"
                   width="100%"
                   height="100%"
                   style={{ border: 0 }}

@@ -78,13 +78,13 @@ export default function Footer() {
             </Link>
             <p className="font-medium mb-4">SBL株式会社</p>
             <p className="text-sm leading-relaxed text-neutral-400">
-              〒270-1369
+              〒276-0013
               <br />
-              千葉県印西市鹿黒南4丁目2
+              千葉県八千代市保品1809-2
               <br />
-              グッドマンビジネスパーク
+              プロロジスパーク八千代2
               <br />
-              イーストゲート A区画 4F
+              3F
             </p>
             <p className="text-sm mt-4">
               <span className="text-neutral-400">Tel.</span>0476-37-8508
