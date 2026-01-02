@@ -15,11 +15,11 @@ export default function ServiceDetailPage() {
 
   return (
     <>
-      {/* Page Header */}
+      {/* Page Header with Dynamic Background */}
       <div
-        className="w-full bg-nax-dark bg-no-repeat bg-cover pt-36"
+        className="w-full bg-nax-dark bg-no-repeat bg-cover bg-center pt-36"
         style={{
-          backgroundImage: `linear-gradient(135deg, rgba(2, 34, 92, 0.95) 0%, rgba(0, 4, 62, 0.9) 100%)`,
+          backgroundImage: `linear-gradient(135deg, rgba(2, 34, 92, 0.85) 0%, rgba(0, 4, 62, 0.88) 100%), url('${service.headerImage}')`,
         }}
       >
         <div className="h-full max-w-[1310px] relative mx-auto px-5">

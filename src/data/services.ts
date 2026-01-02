@@ -13,6 +13,7 @@ export interface ServiceItem {
     content: string;
   }[];
   image: string;
+  headerImage: string; // 页面头部背景图
 }
 
 export interface ServiceCategory {
@@ -24,12 +25,24 @@ export interface ServiceCategory {
   services: ServiceItem[];
 }
 
-// 服务分类图片 (Unsplash 占位图片)
-const categoryImages = {
-  tradeCustoms: 'https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=770&h=520&fit=crop',
-  warehouse: 'https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=770&h=520&fit=crop',
-  fba: 'https://images.unsplash.com/photo-1566576912321-d58ddd7a6088?w=770&h=520&fit=crop',
-  domestic: 'https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=770&h=520&fit=crop',
+// 服务卡片图片（每个服务独立的图片）
+const cardImages = {
+  customs: '/images/services/card-customs.jpg',          // 輸出入通関 - 港口通关
+  quarantine: '/images/services/card-quarantine.jpg',    // 動植物検疫 - 农产品检疫
+  b2c: '/images/services/card-b2c.jpg',                  // B2C発送代行 - 电商发货
+  warehouse3pl: '/images/services/card-3pl.jpg',         // 3PLサービス - 仓库物流
+  fba: '/images/services/card-fba.jpg',                  // FBA納品 - Amazon物流
+  domestic: '/images/services/card-domestic.jpg',        // 国内運送 - 卡车运输
+};
+
+// 服务详情页头部背景图
+const headerImages = {
+  customsClearance: '/images/services/customs-clearance.jpg',
+  quarantine: '/images/services/quarantine.jpg',
+  b2cShipping: '/images/services/b2c-shipping.jpg',
+  warehouse3pl: '/images/services/3pl-warehouse.jpg',
+  fbaDelivery: '/images/services/fba-delivery.jpg',
+  domesticTransport: '/images/services/domestic-transport.jpg',
 };
 
 export const serviceCategories: ServiceCategory[] = [
@@ -56,7 +69,8 @@ export const serviceCategories: ServiceCategory[] = [
           '植物検疫・動物検疫などの各種検査対応',
           '通関後の配送手配',
         ],
-        image: categoryImages.tradeCustoms,
+        image: cardImages.customs,
+        headerImage: headerImages.customsClearance,
       },
       {
         id: 'animal-plant-quarantine',
@@ -74,7 +88,8 @@ export const serviceCategories: ServiceCategory[] = [
           '税関申告および通関手続きの一括対応',
           '検疫完了後の配送手配',
         ],
-        image: categoryImages.tradeCustoms,
+        image: cardImages.quarantine,
+        headerImage: headerImages.quarantine,
       },
     ],
   },
@@ -100,7 +115,8 @@ export const serviceCategories: ServiceCategory[] = [
           '検品・梱包・ラベル貼付',
           'カスタマーサポート（多言語対応可能）',
         ],
-        image: categoryImages.warehouse,
+        image: cardImages.b2c,
+        headerImage: headerImages.b2cShipping,
       },
       {
         id: '3pl-service',
@@ -133,7 +149,8 @@ export const serviceCategories: ServiceCategory[] = [
             content: '経験豊富な物流コンサルタントが、お客様のビジネスモデルに基づき、最適な物流戦略を提案します。これにより、物流コストを削減し、物流効率を向上させることができます。',
           },
         ],
-        image: categoryImages.warehouse,
+        image: cardImages.warehouse3pl,
+        headerImage: headerImages.warehouse3pl,
       },
     ],
   },
@@ -160,7 +177,8 @@ export const serviceCategories: ServiceCategory[] = [
           '納品ミスやラベル不備の未然防止',
           '小ロットから大口まで柔軟に対応',
         ],
-        image: categoryImages.fba,
+        image: cardImages.fba,
+        headerImage: headerImages.fbaDelivery,
       },
     ],
   },
@@ -202,7 +220,8 @@ export const serviceCategories: ServiceCategory[] = [
             content: '専門の運送スタッフが、お客様とのコミュニケーションを大切にしています。配送前には荷物の内容や配送先の詳細をしっかり確認し、配送後もお客様との連絡を欠かさず行い、スムーズなサービスを提供いたします。',
           },
         ],
-        image: categoryImages.domestic,
+        image: cardImages.domestic,
+        headerImage: headerImages.domesticTransport,
       },
     ],
   },
