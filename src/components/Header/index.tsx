@@ -19,31 +19,6 @@ export default function Header() {
           </Link>
         </div>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden lg:flex items-center gap-8">
-          <Link to="/philosophy" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            PHILOSOPHY
-          </Link>
-          <Link to="/information" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            INFORMATION
-          </Link>
-          <Link to="/history" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            HISTORY
-          </Link>
-          <Link to="/office" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            OFFICE
-          </Link>
-          <Link to="/challenge/dx" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            DIGITAL TRANSFORMATION
-          </Link>
-          <Link to="/challenge/environment" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            ENVIRONMENT
-          </Link>
-          <Link to="/challenge/certification" className="text-white font-din text-sm tracking-wider hover:opacity-70 transition-opacity">
-            CERTIFICATION
-          </Link>
-        </nav>
-
         {/* Right Section */}
         <div className="flex items-center gap-4">
           {/* Language Switch */}
