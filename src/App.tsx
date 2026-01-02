@@ -6,6 +6,8 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import HomePage from './pages/HomePage';
 import SolutionsPage from './pages/SolutionsPage';
+import ServicesPage from './pages/ServicesPage';
+import ServiceDetailPage from './pages/ServiceDetailPage';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -78,6 +80,8 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/solutions" element={<SolutionsPage />} />
+          <Route path="/services" element={<ServicesPage />} />
+          <Route path="/service/:slug" element={<ServiceDetailPage />} />
         </Routes>
       </main>
       <Footer />
