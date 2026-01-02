@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import MobileMenu from './MobileMenu';
+import ServiceMegaMenu from './ServiceMegaMenu';
 
 // 下拉箭头 SVG 组件
 const ChevronDown = () => (
@@ -34,14 +35,6 @@ const SearchIcon = () => (
 const PhoneIcon = () => (
   <svg viewBox="0 0 24 24" className="w-6 h-6" fill="none" stroke="currentColor" strokeWidth="2">
     <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-  </svg>
-);
-
-// 地球图标
-const GlobeIcon = () => (
-  <svg viewBox="0 0 24 24" className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2">
-    <circle cx="12" cy="12" r="10" />
-    <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
   </svg>
 );
 
@@ -96,8 +89,8 @@ const navItems = [
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLangOpen, setIsLangOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isServiceMenuOpen, setIsServiceMenuOpen] = useState(false);
 
   // 监听滚动事件
   useEffect(() => {
@@ -116,7 +109,7 @@ export default function Header() {
   // 根据滚动状态决定样式
   const headerBg = isScrolled
     ? 'bg-white border-b border-gray-200 shadow-sm'
-    : 'bg-transparent';
+    : 'bg-transparent border-b border-transparent';
 
   const textColor = isScrolled ? 'text-gray-700' : 'text-white';
   const textColorHover = isScrolled ? 'hover:text-nax-orange' : 'hover:text-nax-orange';
@@ -149,32 +142,57 @@ export default function Header() {
               <ul className="flex items-center gap-1">
                 {navItems.map((item) => (
                   <li key={item.href} className="relative group">
-                    <Link
-                      to={item.href}
-                      className={`inline-flex items-center px-3 py-2.5 text-[15px] font-medium tracking-wide transition-colors ${textColor} ${textColorHover}`}
-                    >
-                      {item.label}
-                      {item.hasDropdown && <ChevronDown />}
-                    </Link>
+                    {/* 事業紹介 使用 Megamenu - hover 触发 */}
+                    {item.label === '事業紹介' ? (
+                      <button
+                        type="button"
+                        onMouseEnter={() => setIsServiceMenuOpen(true)}
+                        className={`inline-flex items-center px-3 py-2.5 text-[15px] font-medium tracking-wide transition-colors ${textColor} ${textColorHover} ${isServiceMenuOpen ? 'text-nax-orange' : ''}`}
+                      >
+                        {item.label}
+                        <svg
+                          aria-hidden="true"
+                          viewBox="0 0 28 16"
+                          className={`align-middle w-2.5 h-2.5 inline-block overflow-hidden ml-1 transition-transform ${isServiceMenuOpen ? 'rotate-180' : ''}`}
+                        >
+                          <path
+                            d="M1.57 1.59l12.76 12.77L27.1 1.59"
+                            strokeWidth="2px"
+                            stroke="currentColor"
+                            fill="none"
+                          />
+                        </svg>
+                      </button>
+                    ) : (
+                      <>
+                        <Link
+                          to={item.href}
+                          className={`inline-flex items-center px-3 py-2.5 text-[15px] font-medium tracking-wide transition-colors ${textColor} ${textColorHover}`}
+                        >
+                          {item.label}
+                          {item.hasDropdown && <ChevronDown />}
+                        </Link>
 
-                    {/* Dropdown Menu */}
-                    {item.hasDropdown && item.dropdownItems && (
-                      <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
-                        <div className="bg-white min-w-[200px] py-4 shadow-lg border border-gray-100 rounded-sm">
-                          {item.dropdownItems.map((dropItem) => (
-                            <Link
-                              key={dropItem.href}
-                              to={dropItem.href}
-                              className="block px-6 py-3 text-[14px] text-gray-600 hover:text-nax-orange hover:bg-gray-50 transition-colors"
-                            >
-                              <span className="block font-medium">{dropItem.label}</span>
-                              <span className="block text-[12px] text-gray-400 mt-0.5">
-                                {dropItem.labelEn}
-                              </span>
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
+                        {/* Dropdown Menu (for other items) */}
+                        {item.hasDropdown && item.dropdownItems && (
+                          <div className="absolute left-0 top-full pt-2 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200">
+                            <div className="bg-white min-w-[200px] py-4 shadow-lg border border-gray-100 rounded-sm">
+                              {item.dropdownItems.map((dropItem) => (
+                                <Link
+                                  key={dropItem.href}
+                                  to={dropItem.href}
+                                  className="block px-6 py-3 text-[14px] text-gray-600 hover:text-nax-orange hover:bg-gray-50 transition-colors"
+                                >
+                                  <span className="block font-medium">{dropItem.label}</span>
+                                  <span className="block text-[12px] text-gray-400 mt-0.5">
+                                    {dropItem.labelEn}
+                                  </span>
+                                </Link>
+                              ))}
+                            </div>
+                          </div>
+                        )}
+                      </>
                     )}
                   </li>
                 ))}
@@ -183,41 +201,15 @@ export default function Header() {
 
             {/* Right Section */}
             <div className="flex items-center gap-2">
-              {/* Language Switcher - Desktop */}
-              <div className="hidden lg:block relative">
-                <button
-                  type="button"
-                  onClick={() => setIsLangOpen(!isLangOpen)}
-                  className={`flex items-center gap-1.5 px-3 py-2 text-[13px] font-medium transition-colors ${iconColor} hover:opacity-80`}
-                >
-                  <GlobeIcon />
-                  <span>Global</span>
-                  <ChevronDown />
-                </button>
-
-                {isLangOpen && (
-                  <div className="absolute right-0 top-full mt-1 bg-white min-w-[120px] py-2 shadow-lg border border-gray-100 rounded-sm">
-                    <button
-                      type="button"
-                      className="block w-full text-left px-4 py-2 text-[13px] text-gray-600 hover:text-nax-orange hover:bg-gray-50"
-                    >
-                      日本語
-                    </button>
-                    <button
-                      type="button"
-                      className="block w-full text-left px-4 py-2 text-[13px] text-gray-600 hover:text-nax-orange hover:bg-gray-50"
-                    >
-                      English
-                    </button>
-                    <button
-                      type="button"
-                      className="block w-full text-left px-4 py-2 text-[13px] text-gray-600 hover:text-nax-orange hover:bg-gray-50"
-                    >
-                      中文
-                    </button>
-                  </div>
-                )}
-              </div>
+              {/* Language Switcher - Desktop (EN Button) */}
+              <button
+                type="button"
+                className="hidden lg:flex items-center justify-center w-8 h-8 relative"
+              >
+                <span className="bg-white/20 text-[#3a3a3a] font-[din-condensed,sans-serif] font-medium text-center text-sm w-full h-full flex justify-center items-center rounded-sm hover:bg-white/40 transition-colors">
+                  EN
+                </span>
+              </button>
 
               {/* Search Icon - Desktop */}
               <Link
@@ -268,10 +260,12 @@ export default function Header() {
       {/* Mobile Menu */}
       <MobileMenu isOpen={isMenuOpen} onClose={() => setIsMenuOpen(false)} />
 
-      {/* Language dropdown backdrop */}
-      {isLangOpen && (
-        <div className="fixed inset-0 z-[1999]" onClick={() => setIsLangOpen(false)} />
-      )}
+      {/* Service Megamenu */}
+      <ServiceMegaMenu
+        isOpen={isServiceMenuOpen}
+        onClose={() => setIsServiceMenuOpen(false)}
+      />
+
     </>
   );
 }
