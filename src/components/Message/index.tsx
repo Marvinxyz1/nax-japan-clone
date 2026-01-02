@@ -1,14 +1,12 @@
 export default function Message() {
   const messages = [
     '多様な物流ニーズを、シンプルに。\nそれを叶えるのがSBL株式会社の使命です。',
-    '無論、一筋縄ではいきません。\n常に、試行錯誤の連続です。\n過失リスクやクレームとも隣り合わせですから、\n普通なら避けるべき道なのかもしれません。',
-    'しかし、二の足を踏んでいるようでは、\nSBL株式会社の仕事とは言えないのです。',
-    '覚悟を持った挑戦心こそが、道を切り拓く。',
-    '人間を人間たらしめるような心根こそが、\n私たちの原点であり、未来なのだと思います。',
-    'きっとお客様から信頼いただいてるのも、\n他ならぬこの人間力なのではないでしょうか。',
-    '空であろうと、陸であろうと、海であろうと。',
-    'そこに困難な壁が立ちはだかっていれば、\n私たちの出番です。\nテクノロジーがいくら進歩しても、\n時代を歩むのは人間。',
-    '私たちは、「覚悟」「挑戦」「品格」という力を\n決して忘れません。\nそして、どんな変化にも対応し、\nあらゆる困難を超え続けていきたいと\n思っています。',
+    '当社の跨境物流サービスは、\n圧倒的な価格競争力と柔軟な対応が\n最大の強みです。',
+    'コストパフォーマンスに優れた料金体系で、\nお客様の負担を軽減しながらも、\n迅速かつ効率的な物流を実現します。',
+    'さらに、多様なニーズに応じて\n柔軟に対応いたしますので、\n急な変更や特別なご要望にも\nスムーズにお応えします。',
+    '競争力のある価格と高品質なサービスを\n両立させ、お客様のビジネスを\n全力でサポートいたします。',
+    '私たちの倉庫運輸サービスは、\n迅速で柔軟な対応力と、\n幅広い物流ソリューションを通じて、\nお客様のビジネスを力強くサポートします。',
+    '配送から保管、梱包、在庫管理に至るまで、\nワンストップで対応し、\n効率的かつ信頼性の高い物流を実現します。',
   ];
 
   return (
@@ -18,18 +16,12 @@ export default function Message() {
           {/* Left: Sticky Title */}
           <div className="w-full md:w-[395px]">
             <div className="md:sticky md:top-[210px]">
-              <img
-                loading="lazy"
-                src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/fv_text01.svg"
-                alt="人間力で、超えていく。"
-                className="w-full max-w-[324px] object-contain mb-8"
-              />
-              <img
-                loading="lazy"
-                src="https://naxjapan.com/wp/wp-content/themes/naxjapan-corp/assets/images/top/fv_text02.svg"
-                alt="GLOBAL LOGISTICS CONCIERGE"
-                className="max-w-[178px] block"
-              />
+              <h2 className="text-nax-dark text-[32px] md:text-[48px] font-bold leading-tight mb-8">
+                Smart Bridge<br />Logistics
+              </h2>
+              <p className="text-nax-orange text-[14px] md:text-[16px] font-medium tracking-wider">
+                選ばれる理由
+              </p>
             </div>
           </div>
 

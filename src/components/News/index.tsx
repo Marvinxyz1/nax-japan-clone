@@ -1,34 +1,28 @@
 export default function News() {
   const newsItems = [
     {
-      date: '2025-10-07',
-      category: 'その他',
-      title: 'ドライバーの皆様へ トラック予約受付サービス「MOVO」のご利用案内',
-      link: '/news/6191/',
+      date: '2025-08-08',
+      category: 'お知らせ',
+      title: '夏季休業のお知らせ',
+      link: '/news/summer-holiday/',
     },
     {
-      date: '2025-10-01',
-      category: '更新情報',
-      title: '平和島センター保税蔵置場 増設のお知らせ',
-      link: '/news/6121/',
+      date: '2025-05-01',
+      category: 'お知らせ',
+      title: '倉庫拡大のお知らせ',
+      link: '/news/warehouse-expansion/',
     },
     {
-      date: '2025-09-09',
-      category: '更新情報',
-      title: '平和島営業所 事務所移転のお知らせ',
-      link: '/news/6117/',
+      date: '2025-04-23',
+      category: 'お知らせ',
+      title: 'GW休業のお知らせ',
+      link: '/news/gw-holiday/',
     },
     {
-      date: '2025-07-03',
-      category: 'イベント情報',
-      title: '国際 食品物流EXPO [FoodLogiX]に出展します',
-      link: '/news/6049/',
-    },
-    {
-      date: '2025-04-25',
-      category: '更新情報',
-      title: '大阪営業所　事務所移転のお知らせ',
-      link: '/news/5995/',
+      date: '2024-12-20',
+      category: '会社の動向',
+      title: '年末年始の営業スケジュールについて',
+      link: '/news/year-end-schedule/',
     },
   ];
 
@@ -43,7 +37,7 @@ export default function News() {
             NEWS
           </h2>
           <span className="text-neutral-900 section-subtitle font-dnp font-semibold text-sm md:text-lg block mt-1.5 pl-1.5">
-            最新情報
+            お知らせ
           </span>
         </div>
 
