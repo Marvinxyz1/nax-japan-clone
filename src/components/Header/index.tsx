@@ -63,8 +63,8 @@ const navItems = [
   },
   {
     label: '会社概要',
-    labelEn: 'About',
-    href: '/about',
+    labelEn: 'Company',
+    href: '/company',
     hasDropdown: false,
   },
   {

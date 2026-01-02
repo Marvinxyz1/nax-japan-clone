@@ -20,7 +20,7 @@ export default function Footer() {
     ],
     company: [
       { label: 'PHILOSOPHY', href: '/philosophy' },
-      { label: 'INFORMATION', href: '/information' },
+      { label: 'INFORMATION', href: '/company' },
       { label: 'HISTORY', href: '/history' },
       { label: 'OFFICE', href: '/office' },
     ],
